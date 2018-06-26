@@ -4,13 +4,13 @@ Das Active Directory wird in vielen Unternehmen als Verzeichnis zur Pflege von B
 
 Alle Systeme im Unternehmen die mit Active Directory synchronisieren oder dieses als LDAP-Verzeichnis nutzen, haben danach Zugriff auf diese Daten, so dass diese nicht mehr doppelt geführt werden müssen. 
 
-Manchmal gibt es aber auch Systeme im Unternehmen, die nicht so leicht mit dem Active Directory synchronisierbar sind. Dazu gehören vielleicht in die Jahre gekommene Telefonanlagen, Programme ohne LDAP-Modul oder andere Legacy-Systeme. In diesen Fällen kann es Sinn machen, die Benutzerdaten aus dem Active Directory automatisch und in regelmäßigen Abständen für diese Systeme in Dateiform bereitzustellen.
+Manchmal gibt es aber auch Systeme im Unternehmen, die nicht so leicht mit dem Active Directory synchronisierbar sind. Dazu gehören vielleicht in die Jahre gekommene Telefonanlagen, Programme ohne LDAP-Modul oder andere Legacy-Systeme. In diesen Fällen kann es Sinn machen, die Benutzerdaten aus dem Active Directory automatisch und in regelmäßigen Abständen für diese Systeme in Dateiform bereitzustellen. Einen Vorschlag für den automatischen Import fremder Kontaktdaten in Exchange Online gibt es [hier](https://github.com/KimCM/ExchangeOnlineContactImport).
 
-Das Script <a href="user-export.ps1">user-export.ps1</a> exportiert die Benutzerdaten exemplarisch in eine <a href="https://de.wikipedia.org/wiki/CSV_(Dateiformat)">CSV-Datei</a>. Darüber hinaus wird pro Benutzer eine <a href="">vCard</a> erstellt.
+Das Script [user-export.ps1](user-export.ps1) exportiert die Benutzerdaten exemplarisch in eine [CSV-Datei](https://de.wikipedia.org/wiki/CSV_(Dateiformat)). Darüber hinaus wird pro Benutzer eine [vCard](https://de.wikipedia.org/wiki/VCard) erstellt.
 
 ## Zeitsteuerung
 
-Meiner Meinung macht es Sinn dieses Script zeitgesteuert z.B. alle 15 Minuten durch den <a href="https://docs.microsoft.com/de-de/windows/desktop/TaskSchd/using-the-task-scheduler">Task Scheduler</a> ausführen zu lassen. Die Dateien werden auf einem UNC-Pfad abgelegt, so dass andere Scripte diese Daten als Quelle für den Import nutzen können.
+Meiner Meinung macht es Sinn dieses Script zeitgesteuert z.B. alle 15 Minuten durch den [Task Scheduler](https://docs.microsoft.com/de-de/windows/desktop/TaskSchd/using-the-task-scheduler) ausführen zu lassen. Die Dateien werden auf einem UNC-Pfad abgelegt, so dass andere Scripte diese Daten als Quelle für den Import nutzen können.
 
 ## Datenschutz
 
@@ -74,4 +74,4 @@ z.B so:
 | `OfficePhone` | Telefon-Nummer Büro Festnetz | +49 681 555-555 |
 | `MobilePhone` | Telefon-Nummer mobil | +49 555-56789 |
 | `Fax` | Telefax-Nummer | +49 555-56780 |
-| `ipPhone` | Skype ID oder SIP-Konto | kimmeiser |
+| `ipPhone` | Skype ID oder SIP-Konto | Kim.Meiser@firmenname.de |
