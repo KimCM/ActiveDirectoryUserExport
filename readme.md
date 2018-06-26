@@ -51,3 +51,27 @@ z.B so:
   -and UserPrincipalName -NotLike "technischerUserName*"
   ...   
 ```
+
+## Datensatzbeschreibung
+
+| Feldname | Beschreibung des Inhalts | Beispiel |
+| --- | --- | --- |
+| `GivenName` | Vorname | Kim  |
+| `Surname` | Nachname | Meiser |
+| `DisplayName` | Anzeigename | Kim Meiser |
+| `Initials` | Initialen / Kürzel | KimCM |
+| `ObjectGUID` | Eindeutige Identifikation dieses Benutzers, wird idealerweise als Identifikation dieses Datensatzes verwendet | 5B4BE7E1-0F40-4DC7-98DE-07F6BF9CFDBE |
+| `Title` | Stellenbezeichnung, Berufsbezeichnung | Chief Architect |
+| `Department` | Abteilung | IT |
+| `Company` | Organisation, Firma | Mega Business Inc. |
+| `StreetAddress` | Straße inkl. Hausnummer | Innovation Street 2a |
+| `PostalCode` | Postleitzahl | 12345 |
+| `City` | Stadt | Springfield |
+| `Country` | Land | DE |
+| `Office` | Ort des Büros oder Bürobezeichnung, z.B. Zürich, Saarbrücken oder Frankfurt am Main | Saarbrücken West
+| `EmailAddress` | E-Mail-Adresse | github@kimcm.de |
+| `wwwHomePage` | Benutzer-Seite im Internet oder Intranet | http://kimcm.de
+| `OfficePhone` | Telefon-Nummer Büro Festnetz | +49 681 555-555 |
+| `MobilePhone` | Telefon-Nummer mobil | +49 555-56789 |
+| `Fax` | Telefax-Nummer | +49 555-56780 |
+| `ipPhone` | Skype ID oder SIP-Konto | kimmeiser |
