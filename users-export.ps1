@@ -56,7 +56,7 @@ ForEach ($user in $ADUsers) {
   # FN: Formatierte Zeichenfolge mit dem vollständigen Namen des vCard-Objekts.
   Add-Content -Path $vCardPath -Value "FN:$($user.DisplayName)"
  
-  # TITLE: Angabe der Stellenbezeichnung, funktionellen Stellung oder Funktion der mit dem vCard-Objekt verbundenen Person inneraalb einer Organisation.
+  # TITLE: Angabe der Stellenbezeichnung, funktionellen Stellung oder Funktion der mit dem vCard-Objekt verbundenen Person innerhalb einer Organisation.
   Add-Content -Path $vCardPath -Value "TITLE:$($user.Title)"
   
   # ORG: Name und gegebenenfalls Einheit(en) der Organisation, der das vCard-Objekt zugeordnet ist. 
@@ -83,8 +83,7 @@ ForEach ($user in $ADUsers) {
   # KIND: Art des Objekts, das die vCard beschreibt: 
   #       Eine Person (individual), eine Organisation (organization) oder eine Gruppe (group).
   Add-Content -Path $vCardPath -Value "KIND:individual"
-  
-  
+    
   # REV: Zeitstempel der letzten Aktualisierung der vCard.
   Add-Content -Path $vCardPath -Value "REV:$((get-date).ToUniversalTime().ToString("yyyyMMddTHHmmssfffffffZ"))"
   
